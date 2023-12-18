@@ -13,8 +13,16 @@ RUN pip install -r requirements.txt
 # Copy the current directory contents into the container at /app
 COPY . .
 
-# Expose port 7050 to the outside world
-EXPOSE 7050
+RUN chmod +x /app/run_daily.sh
+
+# Expose port 8000 to the outside world
+EXPOSE 8000
+
+RUN echo "0 0 * * * /app/run_daily.sh" > /etc/crontabs/root
+
+RUN python3 manage.py flush_db
+
+RUN python3 manage.py initialize_db
 
 # Define the command to run your application
 CMD ["python3", "manage.py", "runserver", "0.0.0.0:8000"]
