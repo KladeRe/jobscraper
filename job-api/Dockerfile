@@ -18,8 +18,6 @@ RUN chmod +x /app/run_daily.sh
 # Expose port 8000 to the outside world
 EXPOSE 8000
 
-RUN echo "0 0 * * * /app/run_daily.sh" > /etc/crontabs/root
-
 RUN python3 manage.py flush_db
 
 RUN python3 manage.py initialize_db
