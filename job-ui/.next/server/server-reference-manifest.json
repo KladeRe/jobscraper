@@ -1,0 +1,22 @@
+{
+  "node": {
+    "597e204948d0fc694ae24f5a44df84fce586377b": {
+      "workers": {
+        "app/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fapp%2Fsrc%2Fapp%2Fpage.tsx%22%2C%5B%22default%22%5D%5D%5D&__client_imported__=!"
+      },
+      "layer": {
+        "app/page": "rsc"
+      }
+    },
+    "ec986f96e0e611ab360257cc7803b769918abb5c": {
+      "workers": {
+        "app/listings/[id]/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fapp%2Fsrc%2Fapp%2Flistings%2F%5Bid%5D%2Fpage.tsx%22%2C%5B%22default%22%5D%5D%5D&__client_imported__=!"
+      },
+      "layer": {
+        "app/listings/[id]/page": "rsc"
+      }
+    }
+  },
+  "edge": {},
+  "encryptionKey": "XHu3SpHfo1rKJB35phye5jgfOrOKRaA8noKs8psgrCk="
+}

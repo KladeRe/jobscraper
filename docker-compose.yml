@@ -1,0 +1,28 @@
+version: '3.4'
+services:
+  job-ui:
+    container_name: job-ui
+    build:
+      context: ./job-ui
+    restart: "no"
+    volumes:
+      - ./job-ui/:/app
+    ports:
+      - 3000:3000
+
+    depends_on:
+      - job-api
+
+  job-api:
+    container_name: job-api
+    build:
+      context: ./job-api
+    image: job-api
+    restart: "no"
+    volumes:
+      - ./job-api/:/app
+    ports:
+      - "8000:8000"
+
+
+
